@@ -8,6 +8,8 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -33,13 +35,20 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#/">159web</a>
+          <a class="navbar-brand" href="#/"><strong>#159</strong></a>
         </div>
 
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
           <ul class="nav navbar-nav">
-            <li><a href="#/">Inicio</a></li>
+            <li><a href="#/" role="button">Actividades</a></li>
+            <li>
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Comunidades <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li> <a href="#/community/list" role="button">Listado</a></li>
+                <li> <a href="#/community/create" role="button">Crear</a></li>
+              </ul>
+            </li>
             <li><a ng-href="#/about">Quines Somos</a></li>
             <li><a ng-href="#/">Contacto</a></li>
           </ul>
@@ -64,7 +73,8 @@
                   <input type="password" id="pwd" class="form-control">
                 </div>
                 <div class="form-group">
-                  <button type="submit" class="btn btn-success pull-right">Ingresar</button>
+                  <a href="#/person/register" class="btn btn-success">Regitrarme</a>
+                  <button type="submit" class="btn btn-primary ingresar pull-right">Ingresar</button>
                   <br/>
                 </div>
               </form>
@@ -110,6 +120,7 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -118,6 +129,9 @@
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/activitydetail.js"></script>
+  <script src="scripts/controllers/registerperson.js"></script>
+  <script src="scripts/controllers/communities.js"></script>
+  <script src="scripts/controllers/createcommunity.js"></script>
   <!-- endbuild -->
 
 

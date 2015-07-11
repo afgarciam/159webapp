@@ -1,16 +1,41 @@
+textarea{
+  width: 100%;
+  max-width: 100%;
+}
+
 .activity{
   margin-bottom: 2em;
 }
+.form-register{
+}
 
-.navbar-default {
+.navbar-default,.dropdown-toggle {
   background-color: #303F9F;
   border-color: #f5f5f5;
 }
 
 .navbar-default .navbar-nav > li > a, a:active {
   color: #f5f5f5;
+  cursor: pointer;
 }
 
 .navbar-brand{
   color: #f5f5f5 !important;
+}
+
+.result{
+
+}
+
+
+.title-page{
+  background-color: #2196F3;
+  border-radius: 5px;
+  color: #fff;
+  padding: .5em;
+}
+
+.title-page-legend{
+  color: #727272;
+  text-align: right;
 }

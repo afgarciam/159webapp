@@ -1,60 +1,50 @@
 <div ng-controller="MainCtrl">
-  <!-- Page Heading -->
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-10 col-md-offset-1">
       <h1 class="page-header">#159
-        <small>Guate Participa</small>
+        <small>Nuestras Actividades!</small>
       </h1>
     </div>
   </div>
-  <!-- /.row -->
-
-  <!-- Project One -->
-  <div class="row activity" ng-repeat="item in [1,2,3,4]">
-    <div class="col-md-7">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/700/300/people" alt="">
-      </a>
-    </div>
-    <div class="col-md-5">
-      <h3>Actividad {{item}}</h3>
-      <h4>#RenunciaYa</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-      <a class="btn btn-primary" href="#/activity/detail">Ver Actividad<span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div>
-  </div>
-  <!-- /.row -->
-  <!-- Pagination -->
-  <div class="row text-center">
-    <div class="col-lg-12">
-      <ul class="pagination">
-        <li>
-          <a href="#/">&laquo;</a>
-        </li>
-        <li class="active">
-          <a href="#/">1</a>
-        </li>
-        <li>
-          <a href="#/">2</a>
-        </li>
-        <li>
-          <a href="#/">&raquo;</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- /.row -->
-
-  <hr>
-
-  <!-- Footer -->
-  <footer>
+  <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <p>Copyright &copy; Your Website 2014</p>
+      <aside class="col-md-3">
+        <a class="twitter-timeline" href="https://twitter.com/hashtag/Somos159" data-widget-id="619986509807099904">Tweets sobre #Somos159</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </aside>
+      <div class="col-md-9">
+        <div class="row activity" ng-repeat="item in [1,2,3,4]">
+          <div class="col-md-5">
+            <a href="#">
+              <img class="img-responsive img-rounded" src="http://lorempixel.com/700/300/people" alt="">
+            </a>
+          </div>
+          <div class="col-md-7">
+            <h3>Actividad {{item}}</h3>
+            <h4>#RenunciaYa</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+            <a class="btn btn-primary btn-sm pull-right" href="#/activity/detail">Ver Actividad<span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- /.row -->
-  </footer>
-
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <ul class="pagination">
+          <li>
+            <a href="#/">&laquo;</a>
+          </li>
+          <li class="active">
+            <a href="#/">1</a>
+          </li>
+          <li>
+            <a href="#/">2</a>
+          </li>
+          <li>
+            <a href="#/">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
