@@ -13,30 +13,30 @@ angular.module('159webApp')
     id:$rootScope.communityId,
     name:$rootScope.communityName
   };
-  $scope.punto = {
+  $scope.point = {
     'latitude': 14.613411429802484,
     'longitude': -90.53492810058594
   };
   uiGmapGoogleMapApi.then(function (maps) {
-    $scope.mapas = maps;
-    $scope.mapa = { center: { latitude: $scope.punto.latitude, longitude: $scope.punto.longitude }, zoom: 16 , bounds:{}};
+    $scope.maps = maps;
+    $scope.map = { center: { latitude: $scope.point.latitude, longitude: $scope.point.longitude }, zoom: 16 , bounds:{}};
   });
-  $scope.marcador = {
+  $scope.marker = {
     id: 1,
-    coords: {
-      latitude: $scope.punto.latitude,
-      longitude: $scope.punto.longitude
+    coor: {
+      latitude: $scope.point.latitude,
+      longitude: $scope.point.longitude
     },
-    opciones: {
+    options: {
       draggable: true,
-      labelContent: "lat: " + $scope.punto.latitude + ' ' + 'lon: ' + $scope.punto.longitude,
+      labelContent: "lat: " + $scope.point.latitude + ' ' + 'lon: ' + $scope.point.longitude,
       labelAnchor: "100 0",
       labelClass: "label label-success"},
       animate:1,
-      eventos: {
+      events: {
         dragend: function (marker, eventName, args) {
-          $scope.punto.latitude = marker.getPosition().lat();
-          $scope.punto.longitude = marker.getPosition().lng();
+          $scope.point.latitude = marker.getPosition().lat();
+          $scope.point.longitude = marker.getPosition().lng();
         }
       }
     };
@@ -51,14 +51,17 @@ angular.module('159webApp')
       $scope.send = false;
     };
     $scope.createActivity = function(){
+      if($scope.community.id == null){
+        $scope.community.id = 6;
+      }
       var datos = $.param({
         name: $scope.activity.name,
         description:$scope.activity.description,
         begin_date: new Date($scope.activity.beginDate).toISOString(),
         end_date:new Date($scope.activity.endDate).toISOString(),
-        latitude:$scope.punto.latitude,
-        longitude:$scope.punto.longitude,
-        minimum_assitant: $scope.activity.assistant,
+        latitude:$scope.point.latitude,
+        longitude:$scope.point.longitude,
+        minimum_assistant: $scope.activity.assistant,
         town: 1,
         community:$scope.community.id
       });
@@ -75,6 +78,10 @@ angular.module('159webApp')
         $scope.result.message = 'Tu actividad ha sido creada.';
         $scope.send = true;
         $scope.activity = {};
+        $scope.point = {
+          'latitude': 14.613411429802484,
+          'longitude': -90.53492810058594
+        };
       })
       .error(function(resp){
         $scope.result.titl = 'Error';

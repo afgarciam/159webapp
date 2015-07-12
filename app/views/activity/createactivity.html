@@ -84,21 +84,21 @@ $(document).ready(function(){
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="txtLatitude">Latitude:</label>
-                        <input type="text" name="txtLatitude" id="txtLatitude" placeholder="Latitud" class="form-control" required ng-model="punto.latitude">
+                        <input type="text" name="txtLatitude" id="txtLatitude" placeholder="Latitud" class="form-control" required ng-model="point.latitude">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="txtLongitude">Longitude:</label>
-                        <input type="text" name="txtLongitude" id="txtLongitude" placeholder="Longitud" class="form-control" required ng-model="punto.longitude">
+                        <input type="text" name="txtLongitude" id="txtLongitude" placeholder="Longitud" class="form-control" required ng-model="point.longitude">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <div class="contenedor-mapa">
-                        <ui-gmap-google-map center='mapa.center' zoom='mapa.zoom' options="opciones">
-                          <ui-gmap-marker coords="marcador.coords" options="marcador.opciones" idkey="marcador.id" events="marcador.eventos"></ui-gmap-google-map>
+                      <div class="container-map">
+                        <ui-gmap-google-map center='map.center' zoom='map.zoom' options="options">
+                          <ui-gmap-marker coords="marker.coor" options="marker.options" idkey="marker.id" events="marker.events"></ui-gmap-google-map>
                           </div>
                         </div>
                       </div>
