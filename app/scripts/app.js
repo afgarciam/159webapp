@@ -21,8 +21,8 @@ angular
   'uiGmapgoogle-maps',
 ])
 .constant('config',{
-  'urlApi':'http://192.168.0.159:8000/api/',
-  'urlImg':'http://192.168.0.159:8000',
+  'urlApi': 'http://104.236.241.155:9020/api/',
+  'urlImg': 'http://104.236.241.155:9020',
   'formatoFecha' : 'dd/MM/yyyy'
 })
 .config(function ($routeProvider, uiGmapGoogleMapApiProvider) {
