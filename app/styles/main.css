@@ -1,12 +1,55 @@
+p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 textarea{
   width: 100%;
   max-width: 100%;
 }
 
+
 .activity{
   margin-bottom: 2em;
 }
+.angular-google-map-container {
+	height: 345px;
+}
+.attend{
+  background-color: #B6B6B6;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: .8em;
+}
+.attend .progress{
+  margin-top: 5px;
+}
+.attend span{
+  margin-left: 2px;
+}
+.counter-member{
+  background-color: #4CAF50;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 5px;
+  padding: .5em;
+  text-align: center;
+}
+.counter-member h1{
+  margin: 0;
+}
+.contenedor-mapa{
+	border: 2px solid #99B898;
+	border-radius: 5px;
+	padding: 1px;
+	height: 350px;
+}
 .form-register{
+}
+.logo-community{
+  max-width: 150px;
+  max-height:auto;
 }
 
 .navbar-default,.dropdown-toggle {
@@ -38,4 +81,9 @@ textarea{
 .title-page-legend{
   color: #727272;
   text-align: right;
+}
+
+.welcome{
+  background-color: #607D8B !important;
+  color:#f5f5f5;
 }

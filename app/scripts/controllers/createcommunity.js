@@ -62,6 +62,7 @@ angular.module('159webApp')
       $scope.send = true;
       $scope.community = {};
       $scope.objectives = [];
+      $scope.objective ='';
     })
     .error(function(resp){
       $scope.result.titl = 'Error';

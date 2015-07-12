@@ -17,13 +17,15 @@ angular
   'ngResource',
   'ngRoute',
   'ngSanitize',
-  'ngTouch'
+  'ngTouch',
+  'uiGmapgoogle-maps',
 ])
 .constant('config',{
   'urlApi':'http://192.168.0.159:8000/api/',
+  'urlImg':'http://192.168.0.159:8000',
   'formatoFecha' : 'dd/MM/yyyy'
 })
-.config(function ($routeProvider) {
+.config(function ($routeProvider, uiGmapGoogleMapApiProvider) {
   $routeProvider
   .when('/', {
     templateUrl: 'views/main.html',
@@ -33,9 +35,17 @@ angular
     templateUrl: 'views/about.html',
     controller: 'AboutCtrl'
   })
+  .when('/activity/list', {
+    templateUrl: 'views/activity/activities.html',
+    controller: 'ActivitiesCtrl'
+  })
   .when('/activity/detail', {
     templateUrl: 'views/activity/activitydetail.html',
     controller: 'ActivitydetailCtrl'
+  })
+  .when('/activity/create', {
+    templateUrl: 'views/activity/createactivity.html',
+    controller: 'CreateactivityCtrl'
   })
   .when('/person/register',{
     templateUrl:'views/person/registerperson.html',
@@ -51,5 +61,11 @@ angular
   })
   .otherwise({
     redirectTo: '/'
+  });
+
+  uiGmapGoogleMapApiProvider.configure({
+    key: 'AIzaSyBT3ghh6hRocWTe3i0aOWlqnNOUUzMcFok',
+    v: '3.17',
+    libraries: 'weather,geometry,visualization'
   });
 });
