@@ -7,7 +7,7 @@
           por {{activity.community.name}}
         </p>
         <hr>
-        <p><span class="glyphicon glyphicon-time"></span> {{activity.creation_date}}</p>
+        <p><span class="glyphicon glyphicon-time"></span> Inicio: {{activity.end_date|date:'dd/MM/yyyy'}} - Finaliza: {{activity.end_date|date:'dd/MM/yyyy'}}</p>
         <hr>
         <img class="img-responsive img-rounded" src="http://lorempixel.com/900/300/people" alt="">
         <hr>
@@ -35,7 +35,7 @@
           <label for="">Asistirás?</label>
           <div>
             <button ng-click="attendActivity()" class="btn btn-default btn-xs btn-success"><i class="glyphicon glyphicon-ok"></i><span class="badge"> {{attend.yes}}</span></button>
-            <button ng-click="noAttendActivity()" class="btn btn-default btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i><span class="badge"> {{attend.no}}</span></button>
+            <!-- <button ng-click="noAttendActivity()" class="btn btn-default btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i><span class="badge"> {{attend.no}}</span></button> -->
           </div>
           <div class="progress">
             <div class="progress-bar progress-bar-{{assistant.cssClass}}" role="progressbar" aria-valuenow="{{assistant.val}}" aria-valuemin="0" aria-valuemax="100" style="min-width: 0%;" ng-style="{width :assistant.val + '%'}">

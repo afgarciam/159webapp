@@ -30,6 +30,9 @@ textarea{
 .banner img{
   max-height: 240px;
 }
+.bg-white{
+  background-color: #fff;
+}
 .counter-member{
   background-color: #4CAF50;
   border-radius: 5px;
@@ -48,14 +51,12 @@ textarea{
 	padding: 1px;
 	height: 350px;
 }
-.form-register{
-}
 .logo-community{
   max-width: 150px;
   max-height:auto;
 }
 
-.navbar-default,.dropdown-toggle {
+/*.navbar-default,.dropdown-toggle {
   background-color: #303F9F;
   border-color: #f5f5f5;
 }
@@ -67,6 +68,12 @@ textarea{
 
 .navbar-brand{
   color: #f5f5f5 !important;
+}*/
+
+.popover-title{
+  border-radius: 0 !important;
+  font-size: 24px;
+  color: #000;
 }
 
 .result{
@@ -75,10 +82,17 @@ textarea{
 
 
 .title-page{
-  background-color: #2196F3;
+  background-color: #fff;
   border-radius: 5px;
-  color: #fff;
-  padding: .5em;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+  color: #000;
+  margin-top: 10px;
+  padding: 1em;
+}
+
+.title-page h1{
+  margin: 0;
+  padding: 0;
 }
 
 .title-page-legend{

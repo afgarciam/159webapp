@@ -15,7 +15,7 @@ $(document).ready(function(){
 <div ng-controller="CreateactivityCtrl">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2 bg-white">
         <div class="title-page">
           <h1>Actividad</h1>
         </div>
@@ -25,7 +25,7 @@ $(document).ready(function(){
       </div>
     </div>
     <div class="row result" ng-if="send">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2 bg-white">
         <div class="alert alert-{{result.class}} alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="changeSend()"><span aria-hidden="true">&times;</span></button>
           <strong>{{result.titl}} </strong>{{result.message}}
@@ -33,7 +33,7 @@ $(document).ready(function(){
       </div>
     </div>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2 bg-white">
         <form class="" method="post" ng-submit="createActivity()">
           <div class="row">
             <div class="col-md-12">

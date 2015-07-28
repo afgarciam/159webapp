@@ -1,0 +1,55 @@
+<div ng-controller="InvitationCtrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 bg-white">
+        <div class="title-page">
+          <h1>Quiero Unirme</h1>
+        </div>
+        <div class="title-page-legend">
+          <h3>Unete a nuestra comunidad! <small class="glyphicon glyphicon-user"></small></h3>
+        </div>
+      </div>
+    </div>
+    <div class="row result" ng-if="send">
+      <div class="col-md-8 col-md-offset-2 bg-white">
+        <div class="alert alert-{{result.class}} alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="changeSend()"><span aria-hidden="true">&times;</span></button>
+          <strong>{{result.titl}} </strong>{{result.message}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 bg-white">
+        <form ng-submit="addMe()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="txtName">Nombre:</label>
+                <input type="text" name="txtName" id="txtName" placeholder="Nombre" class="form-control" required ng-model="invitarion.name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="txtLastName">Apellido:</label>
+                <input type="text" name="txtLastName" id="txtLastName" placeholder="Nombre" class="form-control" required ng-model="invitation.lastName">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="txtEmail">Correo:</label>
+                <input type="mail" name="txtEmail" id="txtEmail" placeholder="Correo" class="form-control" required ng-model="invitation.email" >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input type="submit" class="btn btn-primary pull-right" value="Unirme"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

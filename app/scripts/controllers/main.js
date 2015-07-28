@@ -9,5 +9,7 @@
 */
 angular.module('159webApp')
 .controller('MainCtrl', function ($scope) {
+  $scope.login = function(){
 
+  };
 });

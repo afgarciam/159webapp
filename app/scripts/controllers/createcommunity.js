@@ -45,7 +45,7 @@ angular.module('159webApp')
       name: $scope.community.name,
       purpose: $scope.community.purpose,
       idSector: $scope.community.sector.id,
-      idPerson: 4,
+      idPerson: 15,
       objectives: JSON.stringify($scope.objectives)
     });
 

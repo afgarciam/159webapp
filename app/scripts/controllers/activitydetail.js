@@ -8,8 +8,13 @@
 * Controller of the 159webApp
 */
 angular.module('159webApp')
-.controller('ActivitydetailCtrl', function ($scope,$rootScope,$http,config,uiGmapGoogleMapApi) {
+.controller('ActivitydetailCtrl', function ($scope,$rootScope,$http,config,uiGmapGoogleMapApi, $cookies) {
   $scope.activity = $rootScope.activity;
+
+  var actId = $cookies.get('activityID');
+  if($scope.activity != null){
+    $cookies.put('activityID', $scope.activity.id);
+  }
   $rootScope.activityAccept = 0;
   $scope.viewMap = false;
   var percent = 0;
@@ -34,7 +39,7 @@ angular.module('159webApp')
   };
   $http({
     method:'GET',
-    url:config.urlApi+'activities/4/'
+    url:config.urlApi+'activities/'+actId+'/'
   })
   .success(function(res){
     $scope.activity = res;
@@ -104,7 +109,7 @@ angular.module('159webApp')
       }
     };
     var calcAssistant = function(){
-      if(percentAssistant >= 0 || percentAssistant <=99){
+      if(percentAssistant >= 0 && percentAssistant <=99){
         percentAssistant = Math.round((($scope.attend.yes-$scope.attend.no)/$scope.activity.minimum_assistant)*100);
         if(percentAssistant>=66){
           $scope.assistant.cssClass = 'success';
