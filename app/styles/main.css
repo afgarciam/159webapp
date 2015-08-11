@@ -7,10 +7,35 @@ textarea{
   width: 100%;
   max-width: 100%;
 }
-
-
 .activity{
+  background-color: #f5f5f5;
+  border-radius: 6px;
   margin-bottom: 2em;
+  padding: 1em;
+}
+.activity h2{
+  margin-bottom: 0;
+}
+.activity:nth-child(1){
+  /*background-color: #8BC34A;*/
+}
+.activity:nth-child(1) h3,h4{
+  /*color:#212121;*/
+}
+.activity:nth-child(1) .activity-image{
+  /*max-height: 400px;
+  max-width: 100%;*/
+}
+.activity-image{
+  max-height: 200px;
+  max-width: 100%;
+}
+.activity-image-like{
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+  max-height: 30px;
+  max-width: 30px;
 }
 .angular-google-map-container {
 	height: 345px;
@@ -55,32 +80,29 @@ textarea{
   max-width: 150px;
   max-height:auto;
 }
-
-/*.navbar-default,.dropdown-toggle {
-  background-color: #303F9F;
-  border-color: #f5f5f5;
-}
-
-.navbar-default .navbar-nav > li > a, a:active {
-  color: #f5f5f5;
-  cursor: pointer;
-}
-
-.navbar-brand{
-  color: #f5f5f5 !important;
-}*/
-
 .popover-title{
   border-radius: 0 !important;
   font-size: 24px;
   color: #000;
 }
-
-.result{
-
+.profile-comunity-type{
+  border-radius: 5px;
+  height: 40px;
+  margin: auto;
+  width: 40px;
 }
-
-
+.profile-image{
+  box-shadow: 0 0 10px #000;
+  margin: auto;
+  max-height: auto;
+  max-width: 150px;
+}
+.profile-verified{
+  display: inline-block;
+  margin-left: 3%;
+  max-height: auto;
+  max-width: 25px;
+}
 .title-page{
   background-color: #fff;
   border-radius: 5px;
@@ -89,17 +111,14 @@ textarea{
   margin-top: 10px;
   padding: 1em;
 }
-
 .title-page h1{
   margin: 0;
   padding: 0;
 }
-
 .title-page-legend{
   color: #727272;
   text-align: right;
 }
-
 .welcome{
   background-color: #607D8B !important;
   color:#f5f5f5;

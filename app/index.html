@@ -8,6 +8,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="styles/flatty.css">
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
@@ -54,116 +55,116 @@
             <li><a ng-href="#/about">Quienes Somos</a></li>
           </ul>
           <!-- <form class="navbar-form navbar-right" role="search">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Buscar...">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-              </span>
-            </div>
-          </form> -->
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a id="btnLogin" data-placement="bottom" data-toggle="popover" data-title="Ingreso" data-container="body" type="button" data-html="true">Ingreso</a>
-            </li>
-            <div id="login" class="hide">
-              <!-- <div class="form-group">
-                <a id="btnCloseLogin" class="btn btn-danger btn-xs pull-right"><i class="glyphicon glyphicon-remove"></i></a>
-              </div> -->
-              <form role="form">
-                <div class="form-group">
-                  <label for="user">Usuario:</label>
-                  <input type="text" id="user" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="pwd">Clave</label>
-                  <input type="password" id="pwd" class="form-control">
-                </div>
-                <div class="form-group">
-                  <a href="#/person/register" class="btn btn-success btn-xs pull-right"> Regitrarme</a>
-                  <button type="submit" class="btn btn-primary ingresar pull-right btn-xs">Ingresar</button>
-                  <br/>
-                </div>
-              </form>
-            </div>
-          </ul>
-        </div>
+          <div class="input-group">
+          <input type="text" class="form-control" placeholder="Buscar...">
+          <span class="input-group-btn">
+          <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+        </span>
       </div>
+    </form> -->
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a id="btnLogin" data-placement="bottom" data-toggle="popover" data-title="Ingreso" data-container="body" type="button" data-html="true">Ingreso</a>
+      </li>
+      <div id="login" class="hide">
+        <!-- <div class="form-group">
+        <a id="btnCloseLogin" class="btn btn-danger btn-xs pull-right"><i class="glyphicon glyphicon-remove"></i></a>
+      </div> -->
+      <form role="form">
+        <div class="form-group">
+          <label for="user">Usuario:</label>
+          <input type="text" id="user" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Clave</label>
+          <input type="password" id="pwd" class="form-control">
+        </div>
+        <div class="form-group">
+          <a href="#/person/register" class="btn btn-success btn-xs pull-right"> Regitrarme</a>
+          <button type="submit" class="btn btn-primary ingresar pull-right btn-xs">Ingresar</button>
+          <br/>
+        </div>
+      </form>
     </div>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="">
+  <div ng-view="container-fluid"></div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <p></p>
   </div>
-
-  <div class="container-fluid">
-    <div ng-view=""></div>
-  </div>
-
-  <div class="footer">
-    <div class="container">
-      <p></p>
-    </div>
-  </div>
+</div>
 
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-  <script>
-  !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-    (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-    r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-  }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+  (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+  r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+}(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-XXXXX-X');
-  ga('send', 'pageview');
-  </script>
+ga('create', 'UA-XXXXX-X');
+ga('send', 'pageview');
+</script>
 
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-aria/angular-aria.js"></script>
-  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-  <script src="bower_components/angular-messages/angular-messages.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-  <script src="bower_components/angular-touch/angular-touch.js"></script>
-  <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-  <script src="bower_components/lodash/lodash.js"></script>
-  <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
-  <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
-  <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-  <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/main.js"></script>
-  <script src="scripts/controllers/about.js"></script>
-  <script src="scripts/controllers/activitydetail.js"></script>
-  <script src="scripts/controllers/registerperson.js"></script>
-  <script src="scripts/controllers/communities.js"></script>
-  <script src="scripts/controllers/createcommunity.js"></script>
-  <script src="scripts/controllers/createactivity.js"></script>
-  <script src="scripts/controllers/activities.js"></script>
-  <script src="scripts/controllers/profile.js"></script>
-  <script src="scripts/controllers/communityprofile.js"></script>
-  <script src="scripts/controllers/index.js"></script>
-  <script src="scripts/controllers/invitation.js"></script>
-  <!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/activitydetail.js"></script>
+<script src="scripts/controllers/registerperson.js"></script>
+<script src="scripts/controllers/communities.js"></script>
+<script src="scripts/controllers/createcommunity.js"></script>
+<script src="scripts/controllers/createactivity.js"></script>
+<script src="scripts/controllers/activities.js"></script>
+<script src="scripts/controllers/profile.js"></script>
+<script src="scripts/controllers/communityprofile.js"></script>
+<script src="scripts/controllers/index.js"></script>
+<script src="scripts/controllers/invitation.js"></script>
+<!-- endbuild -->
 
 
-  <script type="text/javascript">
-  $(document).ready(function(){
-    $('[data-toggle=popover]').popover({
-      html: true,
-      content: function() {
-        return $('#login').html();
-      }
-    });
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle=popover]').popover({
+    html: true,
+    content: function() {
+      return $('#login').html();
+    }
+  });
 
-    $('#btnCloseLogin').on('click',function(){
-      $('#btnLogin').popover('hide');
-    });
-  })
-  </script>
+  $('#btnCloseLogin').on('click',function(){
+    $('#btnLogin').popover('hide');
+  });
+})
+</script>
 </body>
 </html>

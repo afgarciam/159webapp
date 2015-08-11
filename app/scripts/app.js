@@ -51,8 +51,8 @@ angular
     templateUrl:'views/person/registerperson.html',
     controller:'RegisterpersonCtrl'
   })
-  .when('/person/addme',{
-    templateUrl:'views/person/addme.html',
+  .when('/person/invitation',{
+    templateUrl:'views/person/invitation.html',
     controller:'InvitationCtrl'
   })
   .when('/community/list',{

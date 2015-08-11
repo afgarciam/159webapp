@@ -12,7 +12,7 @@ angular.module('159webApp')
   $scope.activity = $rootScope.activity;
 
   var actId = $cookies.get('activityID');
-  if($scope.activity != null){
+  if($scope.activity !== null){
     $cookies.put('activityID', $scope.activity.id);
   }
   $rootScope.activityAccept = 0;
@@ -45,9 +45,6 @@ angular.module('159webApp')
     $scope.activity = res;
     $scope.point.latitude = res.latitude;
     $scope.point.longitude = res.longitude;
-    $scope.marker.latitude = res.latitude;
-    $scope.marker.longitude = res.longitude;
-    $scope.initMap();
   });
   $scope.likeActivity = function(){
     $scope.like.yes++;
@@ -68,12 +65,10 @@ angular.module('159webApp')
   $scope.changeViewMap= function(){
     $scope.viewMap = !$scope.viewMap;
   };
-  $scope.initMap = function(){
-    uiGmapGoogleMapApi.then(function (maps) {
-      $scope.maps = maps;
-      $scope.map = { center: { latitude: 14.613411429802484, longitude: -90.53492810058594 }, zoom: 16 , bounds:{}};
-    });
-  }
+  uiGmapGoogleMapApi.then(function (maps) {
+    $scope.maps = maps;
+    $scope.map = { center: { latitude: 14.613411429802484, longitude: -90.53492810058594 }, zoom: 16 , bounds:{}};
+  });
   $scope.marker = {
     id: 1,
     coor: {
@@ -82,9 +77,9 @@ angular.module('159webApp')
     },
     options: {
       draggable: false,
-      labelContent: "lat: " + $scope.point.latitude + ' ' + 'lon: ' + $scope.point.longitude,
-      labelAnchor: "100 0",
-      labelClass: "label label-success"},
+      labelContent: 'lat: ' + $scope.point.latitude + ' ' + 'lon: ' + $scope.point.longitude,
+      labelAnchor: '100 0' ,
+      labelClass: 'label label-success'},
       animate:1,
       events: {
         dragend: function (marker, eventName, args) {
@@ -110,7 +105,7 @@ angular.module('159webApp')
     };
     var calcAssistant = function(){
       if(percentAssistant >= 0 && percentAssistant <=99){
-        percentAssistant = Math.round((($scope.attend.yes-$scope.attend.no)/$scope.activity.minimum_assistant)*100);
+        percentAssistant = Math.round((($scope.attend.yes-$scope.attend.no)/$scope.activity.minimumAssistant)*100);
         if(percentAssistant>=66){
           $scope.assistant.cssClass = 'success';
         }

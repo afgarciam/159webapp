@@ -15,7 +15,8 @@ angular.module('159webApp')
       class:'',
       message:''
     };
-    $scope.addMe = function(){
+    //http://localhost:8000/api/generateinvite/
+    $scope.invitation  = function(){
       $http({
         method:'POST',
         url:config.urlApi+'invitation/',

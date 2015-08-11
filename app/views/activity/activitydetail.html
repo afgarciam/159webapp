@@ -6,125 +6,76 @@
         <p class="lead">
           por {{activity.community.name}}
         </p>
-        <hr>
+        <hr/>
         <p><span class="glyphicon glyphicon-time"></span> Inicio: {{activity.end_date|date:'dd/MM/yyyy'}} - Finaliza: {{activity.end_date|date:'dd/MM/yyyy'}}</p>
-        <hr>
-        <img class="img-responsive img-rounded" src="http://lorempixel.com/900/300/people" alt="">
-        <hr>
+        <hr/>
+        <img class="img-responsive img-rounded" src="http://lorempixel.com/900/300/people" alt=""/>
+        <hr/>
         <p class="lead">{{activity.description}}</p>
-
-        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p> -->
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p> -->
-        <hr>
-        <div class="attend">
-          <label for="">Apoyas esta actividad?</label>
-          <div>
-            <button ng-click="likeActivity()" class="btn btn-default btn-xs btn-success"><i class="glyphicon glyphicon-thumbs-up"></i><span class="badge"> {{like.yes}}</span></button>
-            <button ng-click="noLikeActivity()" class="btn btn-default btn-xs btn-danger"><i class="glyphicon glyphicon-thumbs-down"></i><span class="badge"> {{like.no}}</span></button>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-{{acept.cssClass}}" role="progressbar" aria-valuenow="{{acept.val}}" aria-valuemin="0" aria-valuemax="100" style="min-width: 0%;"  ng-style="{width :acept.val + '%'}">
-              {{acept.val}}%
-            </div>
-          </div>
-        </div>
-        <div class="attend">
-          <label for="">Asistirás?</label>
-          <div>
-            <button ng-click="attendActivity()" class="btn btn-default btn-xs btn-success"><i class="glyphicon glyphicon-ok"></i><span class="badge"> {{attend.yes}}</span></button>
-            <!-- <button ng-click="noAttendActivity()" class="btn btn-default btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i><span class="badge"> {{attend.no}}</span></button> -->
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-{{assistant.cssClass}}" role="progressbar" aria-valuenow="{{assistant.val}}" aria-valuemin="0" aria-valuemax="100" style="min-width: 0%;" ng-style="{width :assistant.val + '%'}">
-              {{assistant.val}}%
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="activity-location">
-          <button type="button"class="btn btn-info btn-sm" ng-click="changeViewMap()">Ubicación <i class="glyphicon glyphicon-map-marker"></i></button>
-          <div class="container-map" ng-if="viewMap==true">
-            <ui-gmap-google-map center='map.center' zoom='map.zoom' options="options">
-              <ui-gmap-marker coords="marker.coor" options="marker.options" idkey="marker.id" events="marker.events"></ui-gmap-google-map>
-              </div>
-            </div>
-            <hr>
-            <div class="well">
-              <h4>Comentar:</h4>
-              <form role="form">
-                <div class="form-group">
-                  <textarea class="form-control" rows="3" ng-model="newComment"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" ng-click="addComment()">Enviar</button>
-              </form>
-            </div>
-            <hr>
-            <div class="media" ng-repeat="comment in comments">
-              <a class="pull-left" href="#">
-                <img class="media-object" src="http://lorempixel.com/64/64/abstract/" alt="">
-              </a>
-              <div class="media-body" >
-                <h4 class="media-heading">USUARIO
-                  <small>{{comment.date}}</small>
-                </h4>
-                <p>
-                  {{comment.content}}
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Blog Sidebar Widgets Column -->
-          <!-- <div class="col-md-4">
-          <div class="well">
-          <h4>Buscar</h4>
-          <div class="input-group">
-          <input type="text" class="form-control">
-          <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-          <span class="glyphicon glyphicon-search"></span>
-        </button>
-      </span>
+        <ul>
+          <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+          <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+          <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+          <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+        </ul>
+        <hr/>
+        <!-- <div class="attend">
+        <label for="">Apoyas esta actividad?</label>
+        <div>
+        <button ng-click="likeActivity()" class="btn btn-default btn-xs btn-success"><i class="glyphicon glyphicon-thumbs-up"></i><span class="badge"> {{like.yes}}</span></button>
+        <button ng-click="noLikeActivity()" class="btn btn-default btn-xs btn-danger"><i class="glyphicon glyphicon-thumbs-down"></i><span class="badge"> {{like.no}}</span></button>
+      </div>
+      <div class="progress">
+      <div class="progress-bar progress-bar-{{acept.cssClass}}" role="progressbar" aria-valuenow="{{acept.val}}" aria-valuemin="0" aria-valuemax="100" style="min-width: 0%;"  ng-style="{width :acept.val + '%'}">
     </div>
-
   </div>
-
-
-  <div class="well">
-  <h4>En las reder</h4>
-  <div class="row">
-  <div class="col-lg-6">
-  <ul class="list-unstyled">
-  <li><a href="#">Facebook</a>
-</li>
-<li><a href="#">Facebook</a>
-</li>
-</ul>
-</div>
-<div class="col-lg-6">
-<ul class="list-unstyled">
-<li><a href="#">Twitter</a>
-</li>
-<li><a href="#">Twitter</a>
-</li>
-</ul>
-</div>
-</div>
-
-</div>
-
-
-<div class="well">
-<h4>Frase Celebre</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-</div>
-
-</div>
-
+  {{acept.val}}%
 </div> -->
+<div class="attend">
+  <label for="">Asistirás?</label>
+  <div>
+    <button ng-click="attendActivity()" class="btn btn-default btn-xs btn-success"><span class="glyphicon glyphicon-ok"></span><span class="badge"> {{attend.yes}}</span></button>
+    <!-- <button ng-click="noAttendActivity()" class="btn btn-default btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i><span class="badge"> {{attend.no}}</span></button> -->
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-{{assistant.cssClass}}" role="progressbar" aria-valuenow="{{assistant.val}}" aria-valuemin="0" aria-valuemax="100" style="min-width: 0%;" ng-style="{width :assistant.val + '%'}">
+    </div>
+  </div>
+  {{assistant.val}}%
+</div>
+<hr/>
+<div class="activity-location">
+  <button type="button"class="btn btn-info btn-sm" ng-click="changeViewMap()">Ubicación <i class="glyphicon glyphicon-map-marker"></i></button>
+  <div class="container-map" ng-if="viewMap==true">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' options="options">
+      <ui-gmap-marker coords="marker.coor" options="marker.options" idkey="marker.id" events="marker.events"></ui-gmap-marker>
+    </ui-gmap-google-map>
+  </div>
+</div>
+<hr/>
+<div class="well">
+  <h4>Comentar:</h4>
+  <form role="form">
+    <div class="form-group">
+      <textarea class="form-control" rows="3" ng-model="newComment"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="addComment()">Enviar</button>
+  </form>
+</div>
+<hr/>
+<div class="media" ng-repeat="comment in comments">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="http://lorempixel.com/64/64/abstract/" alt="">
+  </a>
+  <div class="media-body" >
+    <h4 class="media-heading">USUARIO
+      <small>{{comment.date}}</small>
+    </h4>
+    <p>
+      {{comment.content}}
+    </p>
+  </div>
+</div>
+</div>
 </div>
 </div>

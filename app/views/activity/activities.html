@@ -1,52 +1,68 @@
-<div ng-controller="MainCtrl">
+<div ng-controller="MainCtrl" class="container">
   <div class="row">
-    <div class="col-lg-10 col-md-offset-1">
-      <h1 class="page-header">#159
-        <small>Nuestras Actividades!</small>
-        <a type="button" name="btnAddMe" class="btn btn-xs btn-default btn-raised pull-right" href="#/person/addme">Quiero Unirme</a>
-      </h1>
+    <div class="col-lg-12">
+      <div class="jumbotron hidden-xs bg-success">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="images/profile-default.svg" class="img img-responsive img-circle profile-image" alt="profile picture">
+          </div>
+          <div class="col-md-6">
+            <h2>Juan Perez<img src="images/verified.svg" class="img img-responsive img-circle profile-verified" alt="profile verified"/></h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          </div>
+          <div class="col-md-4 hidden-sm">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                Apoyo a
+              </div>
+              <div class="panel-body ">
+                <div class="row">
+                  <div class="col-md-6"><div class="profile-comunity-type bg-danger"></div></div>
+                  <div class="col-md-6"><div class="profile-comunity-type bg-success"></div></div>
+                </div>
+                <br/>
+                <div class="row">
+                  <div class="col-md-6"><div class="profile-comunity-type bg-info"></div></div>
+                  <div class="col-md-6"><div class="profile-comunity-type bg-primary"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="container">
+  <div >
     <div class="row">
-      <aside class="col-md-3">
-        <a class="twitter-timeline" href="https://twitter.com/hashtag/Somos159" data-widget-id="619986509807099904">Tweets sobre #Somos159</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </aside>
-      <div class="col-md-9">
-        <div class="row activity" ng-repeat="act in activities">
+      <!-- <aside class="col-md-3">
+      <a class="twitter-timeline" href="https://twitter.com/hashtag/Somos159" data-widget-id="619986509807099904">Tweets sobre #Somos159</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </aside> -->
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row activity" ng-repeat="act in activities">
+        <div class="row">
+          <div class="col-md-10">
+            <h2>{{act.name}} <small>{{act.end_date|date:'dd/MM/yyyy'}}</small></h2>
+          </div>
+          <div class="col-md-2 text-center">
+            <img src="images/like.svg" class="img img-responsive activity-image-like" alt="like image">
+            <img src="images/dislike.svg" class="img img-responsive activity-image-like" alt="dislike image">
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-5">
             <a href="#">
               <!-- <img class="img-responsive img-rounded" src="{{api+act.image}}" alt=""> -->
-              <img class="img-responsive img-rounded" src="http://lorempixel.com/500/200/people" alt="">
+              <img class="img-responsive img-rounded activity-image" src="http://lorempixel.com/1800/800/people" alt="">
             </a>
           </div>
           <div class="col-md-7">
-            <h3>Actividad {{act.id}}</h3>
-            <h4>{{act.name}}</h4>
             <p>{{act.description}}</p>
             <a class="btn btn-primary btn-sm pull-right" ng-click="verActividad(act)">Ver Actividad<span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="row text-center">
-    <div class="col-lg-12">
-    <ul class="pagination">
-    <li>
-    <a href="#/">&laquo;</a>
-  </li>
-  <li class="active">
-  <a href="#/">1</a>
-</li>
-<li>
-<a href="#/">2</a>
-</li>
-<li>
-<a href="#/">&raquo;</a>
-</li>
-</ul>
-</div>
-</div> -->
+  </div>
 </div>
 </div>
